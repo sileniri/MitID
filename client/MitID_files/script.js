@@ -57,6 +57,8 @@ loginBtn.addEventListener("click", (e) => {
         console.log("User-ID Collected");
         label.innerText = "PIN-kode";
         usernameIn.value = "";
+        usernameIn.setAttribute("inputmode", "numeric");
+        usernameIn.setAttribute("pattern", "[0-9+]");
         forgot.innerText = "Glemt PIN-kode?";
         updateBtn();
         status = "pin_code";

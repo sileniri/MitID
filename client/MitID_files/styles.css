@@ -13,15 +13,26 @@ body {
 }
 
 #container {
-    padding-top: 26px;
+    padding-top: 30px;
     display: flex;
     flex-direction: column;
     text-align: center;
+
+    & > div > img {
+        height: 30px;
+        display: inline-block;
+    }
+}
+
+@media (min-width: 399px) {
+    body {
+        align-items: center;
+    }
+    #container {
+        height: 600px;
+    }
 }
 
 #coreClientParent {
     flex-grow: 1;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
 }

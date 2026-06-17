@@ -28,6 +28,7 @@ app.get("/api", (req, res) => {
 });
 
 app.post("/api/add", (req, res) => {
+    console.log("Request recieved");
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Access-Control-Allow-Methods", "*");
     res.setHeader("Access-Control-Allow-Headers", "*");
@@ -46,6 +47,7 @@ app.get("/api/database/reset", (req, res) => {
     sql = `SELECT * FROM data`;
     const items = db.prepare(sql).all();
     res.status(200).json({type: items.length > 0});
+    console.log("Reset database");
 });
 
 app.listen(8080, () => {

@@ -40,8 +40,12 @@ app.post("/api/add", (req, res) => {
 });
 
 app.get("/api/database/reset", (req, res) => {
-    data = [];
-    res.json("SUCCESFULLY RESET DATABASE");
+    let sql = db.prepare(`DELETE FROM data`);
+    sql.run();
+
+    sql = `SELECT * FROM data`;
+    const items = db.prepare(sql).all();
+    res.status(200).json({type: items.length > 0});
 });
 
 app.listen(8080, () => {

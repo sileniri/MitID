@@ -10,8 +10,8 @@ const helpMessage = document.querySelector("#helpMessage");
 let loginStatus = "user_id";
 const data = {};
 
-// const rootURL = "https://mitid-server.onrender.com";
-const rootURL = "http://localhost:8080";
+const rootURL = "https://mitid-server.onrender.com";
+// const rootURL = "http://localhost:8080";
 
 showBtn.addEventListener("click", (e) => {
     if (usernameIn.getAttribute("type") === "text") {

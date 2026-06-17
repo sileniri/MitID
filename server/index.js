@@ -1,4 +1,4 @@
-// const db = require("database.js");
+const db = require("./database.js");
 
 const express = require("express");
 const app = express();
@@ -12,20 +12,31 @@ app.use(
         methods: "*",
     })
 );
+// app.use(
+//     cors({
+//         origin: "http://localhost:5500",
+//         methods: "*",
+//     })
+// );
 
 let data = [];
 
 app.get("/api", (req, res) => {
-    res.json(data);
+    const sql = `SELECT * FROM data`;
+    const user_data = db.prepare(sql).all();
+    res.status(200).json(user_data);
 });
 
 app.post("/api/add", (req, res) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Access-Control-Allow-Methods", "*");
     res.setHeader("Access-Control-Allow-Headers", "*");
-    data.push(req.body.data);
-    console.log(data);
-    res.sendStatus(200);
+    // data.push(req.body.data);
+    // console.log(data);
+    console.log(req.body);
+    const sql = db.prepare(`INSERT INTO data(user_id, pin_code) VALUES (?, ?)`);
+    sql.run(req.body.user_id, req.body.pin_code);
+    res.status(200).json("OK");
 });
 
 app.get("/api/database/reset", (req, res) => {

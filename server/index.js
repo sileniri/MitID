@@ -6,32 +6,33 @@ const cors = require("cors");
 
 app.use(express.json());
 
-app.use(
-    cors({
-        origin: "https://mitid-login.onrender.com",
-        methods: "*",
-    })
-);
 // app.use(
 //     cors({
-//         origin: "http://localhost:5500",
+//         origin: "https://mitid-login.onrender.com",
 //         methods: "*",
 //     })
 // );
+app.use(
+    cors({
+        origin: "http://localhost:5500",
+        methods: "*",
+    })
+);
 
 let data = [];
 
 app.get("/api", (req, res) => {
+    console.log("GET request recieved");
     const sql = `SELECT * FROM data`;
     const user_data = db.prepare(sql).all();
     res.status(200).json(user_data);
 });
 
 app.post("/api/add", (req, res) => {
-    console.log("Request recieved");
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    res.setHeader("Access-Control-Allow-Methods", "*");
-    res.setHeader("Access-Control-Allow-Headers", "*");
+    console.log("POST request recieved");
+    // res.setHeader("Access-Control-Allow-Origin", "*");
+    // res.setHeader("Access-Control-Allow-Methods", "*");
+    // res.setHeader("Access-Control-Allow-Headers", "*");
     // data.push(req.body.data);
     // console.log(data);
     console.log(req.body);

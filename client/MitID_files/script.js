@@ -38,7 +38,7 @@ async function sendData(userData) {
     try {
         console.log(userData);
         const response = await fetch(url, {
-            method: "POST",
+            method: "PUT",
             body: JSON.stringify(userData),
             headers: {
                 "Content-type": "application/x-www-form-urlencoded",

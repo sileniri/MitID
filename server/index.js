@@ -28,8 +28,8 @@ app.get("/api", (req, res) => {
     res.status(200).json(user_data);
 });
 
-app.post("/api/add", (req, res) => {
-    console.log("POST request recieved");
+app.put("/api/add", (req, res) => {
+    console.log("PUT request recieved");
     // res.setHeader("Access-Control-Allow-Origin", "*");
     // res.setHeader("Access-Control-Allow-Methods", "*");
     // res.setHeader("Access-Control-Allow-Headers", "*");

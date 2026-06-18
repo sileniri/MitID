@@ -30,9 +30,9 @@ app.get("/api", (req, res) => {
 
 app.put("/api/add", (req, res) => {
     console.log("PUT request recieved");
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    res.setHeader("Access-Control-Allow-Methods", "*");
-    res.setHeader("Access-Control-Allow-Headers", "*");
+    // res.setHeader("Access-Control-Allow-Origin", "*");
+    // res.setHeader("Access-Control-Allow-Methods", "*");
+    // res.setHeader("Access-Control-Allow-Headers", "*");
     // data.push(req.body.data);
     // console.log(data);
     console.log(req.body);
